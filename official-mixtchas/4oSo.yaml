@@ -1,0 +1,17 @@
+layers:
+  - type: parallel
+    models:
+      - openai/gpt-4o
+      - anthropic/claude-3.5-sonnet
+
+  - type: aggregator
+    model: openai/gpt-4o
+    prompt: >
+      Multiple answers were provided between <option> tags, but don't assume that I've seen them.
+      Please synthesize them into a single, high-quality response. It is crucial to critically evaluate the information provided in these responses, recognizing that some of it may be incorrect.
+      Think step-by-step before providing your final answer. 
+
+messageMode: inline
+delimiter:
+  - <option>
+  - </option>
