@@ -1,2 +1,2 @@
 # mixtcha
-quickly mix LLMs together
+## 🧪quickly mix LLMs together🧪
