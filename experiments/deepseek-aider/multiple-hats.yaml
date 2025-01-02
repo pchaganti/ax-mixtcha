@@ -1,0 +1,21 @@
+layers:
+  - type: parallel
+    models: 
+      - deepseek/deepseek-chat
+      - deepseek/deepseek-chat
+    systemPrompts:
+      - "think through the problem like a test engineer, from the end to the beginning"
+      - "think through the problem from first principles, step by step, from the beginning"
+
+  - type: aggregator
+    model: deepseek/deepseek-chat
+    prompt: >
+      Multiple answers were provided between <option> tags. Please synthesize them into a single, high-quality response.
+      Do not assume that I have seen these responses. 
+      Consider all perspectives and create a comprehensive answer that leverages all approaches.
+      Think step-by-step before providing your final answer.
+
+messageMode: inline
+delimiter:
+  - <option>
+  - </option>
