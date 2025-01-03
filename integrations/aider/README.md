@@ -108,7 +108,6 @@ export OPENI_API_BASE=https://api.mixtcha.com
   --exercises-dir polyglot-benchmark \
   --num-tests 1 \
   --new \
-  --no-streaming \
   --edit-format diff
 ```
 
