@@ -87,3 +87,26 @@ You can also call single models on mixtcha:
 ```
 
 `aider --model single-model --verbose --no-stream --no-show-model-warnings`
+
+
+If you want to benchmark a mixtcha on the aider benchmark, here is my current workaround. (I cannot figure out [how to run benchmark script with a .aider.model.settings.yml configuration](https://github.com/Aider-AI/aider/issues/2766))
+
+First follow this: https://github.com/Aider-AI/aider/tree/a44ebfe99fdb5bb578d22fd292c3b94dcd4d05a9/benchmark
+
+After you are inside of the Docker container...
+
+```bash
+export OPENAI_API_KEY=sk-mix-1234yourkeyhere
+
+export OPENI_API_BASE=https://api.mixtcha.com
+
+./benchmark/benchmark.py test \
+  --model "openai/{delimiter: [<option>, </option>], layers: [{models: [deepseek/deepseek-chat, deepseek/deepseek-chat], systemPrompts: ['think through the problem like a test engineer, from the end to the beginning', 'think through the problem from first principles, step by step, from the beginning'], type: parallel}, {model: deepseek/deepseek-chat, prompt: 'Multiple answers were provided between <option> tags. Please synthesize them into a single, high-quality response. Do not assume that I have seen these responses. Consider all perspectives and create a comprehensive answer that leverages all approaches. Think step-by-step before providing your final answer.', type: aggregator}], messageMode: inline}" \
+  --exercises-dir polyglot-benchmark \
+  --num-tests 1 \
+  --new \
+  --no-streaming \
+  --edit-format diff
+```
+
+(You can follow the dict to yaml.dump() example above to get the mixtcha configuration and just prefix it with `openai/`).
