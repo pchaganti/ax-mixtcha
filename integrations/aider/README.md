@@ -15,6 +15,7 @@ See below for examples of how to use mixtcha with aider. To run these examples, 
 
 We have also provided an [example .aider.model.settings.yml file](https://github.com/mixtcha/mixtcha/blob/deepseek-aider/integrations/aider/example.aider.model.settings.yml) that you can copy.
 
+## Configuration via URL
 From a url of a mixtcha configuration:
 
 ```
@@ -28,7 +29,7 @@ From a url of a mixtcha configuration:
 
 `aider --model url-mixtcha --verbose --no-stream --no-show-model-warnings`
 
-
+## Configuration via YAML text string
 From the direct text of a mixtcha configuration:
 ```
 - name: direct-mixtcha
@@ -75,6 +76,7 @@ yaml_string = yaml.dump(config, default_flow_style=True)
 print(yaml_string)
 ```
 
+## Single Model Configuration
 You can also call single models on mixtcha:
 
 ```
@@ -88,6 +90,7 @@ You can also call single models on mixtcha:
 
 `aider --model single-model --verbose --no-stream --no-show-model-warnings`
 
+## Benchmarking a Mixtcha 
 
 If you want to benchmark a mixtcha on the aider benchmark, here is my current workaround. (I cannot figure out [how to run benchmark script with a .aider.model.settings.yml configuration](https://github.com/Aider-AI/aider/issues/2766))
 
