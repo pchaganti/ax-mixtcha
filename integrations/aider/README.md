@@ -13,6 +13,8 @@ It can be helpful to also use the `--verbose` flag to make sure that aider is re
 
 See below for examples of how to use mixtcha with aider. To run these examples, you will need to Get your API key from [mixtcha.com](https://mixtcha.com) and add some credits to your Mixtcha wallet.
 
+We have also provided an [example .aider.model.settings.yml file](https://github.com/mixtcha/mixtcha/blob/deepseek-aider/integrations/aider/example.aider.model.settings.yml) that you can copy.
+
 From a url of a mixtcha configuration:
 
 ```
