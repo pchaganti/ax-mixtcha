@@ -1,4 +1,6 @@
 - name: url-mixtcha
+  streaming: false
+  edit_format: diff
   extra_params:
     api_base: "https://api.mixtcha.com"
     api_key: "sk-mix-1234yourkeyhere"
@@ -6,6 +8,8 @@
     litellm_provider: "openai"
 
 - name: direct-mixtcha
+  streaming: false
+  edit_format: diff
   extra_params:
     api_base: "https://api.mixtcha.com"
     api_key: "sk-mix-1234yourkeyhere"
@@ -21,6 +25,8 @@
     litellm_provider: "openai"
 
 - name: single-model
+  streaming: false
+  edit_format: diff
   extra_params:
     api_base: "https://api.mixtcha.com"
     api_key: "sk-mix-1234yourkeyhere"
