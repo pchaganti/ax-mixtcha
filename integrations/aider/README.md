@@ -11,7 +11,7 @@ Currently, streaming isn't supported [https://github.com/mixtcha/mixtcha/issues/
 
 It can be helpful to also use the `--verbose` flag to make sure that aider is reading the correct model settings file, and to use the `--no-show-model-warnings` flag since aider does not "know about" mixtcha, and will otherwise warn you. 
 
-See below for examples of how to use mixtcha with aider.
+See below for examples of how to use mixtcha with aider. To run these examples, you will need to Get your API key from [mixtcha.com](https://mixtcha.com) and add some credits to your Mixtcha wallet.
 
 From a url of a mixtcha configuration:
 
