@@ -101,7 +101,7 @@ After you are inside of the Docker container...
 ```bash
 export OPENAI_API_KEY=sk-mix-1234yourkeyhere
 
-export OPENI_API_BASE=https://api.mixtcha.com
+export OPENAI_API_BASE=https://api.mixtcha.com
 
 ./benchmark/benchmark.py test \
   --model "openai/{delimiter: [<option>, </option>], layers: [{models: [deepseek/deepseek-chat, deepseek/deepseek-chat], systemPrompts: ['think through the problem like a test engineer, from the end to the beginning', 'think through the problem from first principles, step by step, from the beginning'], type: parallel}, {model: deepseek/deepseek-chat, prompt: 'Multiple answers were provided between <option> tags. Please synthesize them into a single, high-quality response. Do not assume that I have seen these responses. Consider all perspectives and create a comprehensive answer that leverages all approaches. Think step-by-step before providing your final answer.', type: aggregator}], messageMode: inline}" \
