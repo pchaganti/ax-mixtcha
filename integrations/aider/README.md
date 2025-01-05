@@ -90,6 +90,8 @@ You can also call single models on mixtcha:
 
 `aider --model single-model --verbose --no-stream --no-show-model-warnings`
 
+Browse available models and pricing at [mixtcha.com/models_list.yaml](https://mixtcha.com/models_list.yaml)
+
 ## Benchmarking a Mixtcha 
 
 If you want to benchmark a mixtcha on the aider benchmark, here is my current workaround. (I cannot figure out [how to run benchmark script with a .aider.model.settings.yml configuration](https://github.com/Aider-AI/aider/issues/2766))
